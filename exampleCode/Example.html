@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="task-form">
+                            <div class="form-group">
+                                <input type="text" id="task-title" class="form-control"
+                                placeholder="Task Title">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="task-description" class="form-control" rows="3"
+                                placeholder="Task description"></textarea>    
+                            </div>
+                            <button class="btn btn-primary" id="btn-task-form">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="tasks-container">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC7WtKX9eniDIJ56QP47B07E2DLE1e11Y8",
+    authDomain: "fir-project-4a532.firebaseapp.com",
+    databaseURL: "https://fir-project-4a532.firebaseio.com",
+    projectId: "fir-project-4a532",
+    storageBucket: "fir-project-4a532.appspot.com",
+    messagingSenderId: "868916431663",
+    appId: "1:868916431663:web:3c8d07f299728aed9dafda",
+    measurementId: "G-CSD0VKJN3H"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<!--My Code-->
+<script src="main.js"></script>
+    
+</body>
+</html>

@@ -1,73 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firebase</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-</head>
-<body>
-    <div class="container p-4">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <form id="task-form">
-                            <div class="form-group">
-                                <input type="text" id="task-title" class="form-control"
-                                placeholder="Task Title">
-                            </div>
-                            <div class="form-group">
-                                <textarea id="task-description" class="form-control" rows="3"
-                                placeholder="Task description"></textarea>    
-                            </div>
-                            <button class="btn btn-primary" id="btn-task-form">Save</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6" id="tasks-container">
 
-            </div>
+<!DOCTYPE html>
+
+<html class="wide wow-animation scrollTo desktop landscape rd-navbar-static-linked" lang="es">
+
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Site Title-->
+    <title>JORGE CHAVEZ DARTNELL</title>
+    
+    
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="Pagina institucional del colegio estatal jorge chavez dartnell, centro poblado la florida, nuevo imperial, cañete, perú">
+    <link rel="icon" href="images/logo-170x172.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--fontawesome-->
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    
+
+    
+    
+  </head>
+  <body class="">
+    <div class="preloader loaded"> 
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
         </div>
+        <p>Cargando...</p>
+      </div>
+    </div>
+    <!--https://livedemo00.template-help.com/wt_59029_v3/index.html-->
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Header-->
+      <header class="page-head">
+        <!-- RD Navbar Transparent-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-default" data-md-device-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-stick-up-offset="210" data-xl-stick-up-offset="85" data-lg-auto-height="true" data-md-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-lg-stick-up="true">
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap"><span></span></button>
+                <h4 class="panel-title d-lg-none">JCHD</h4>
+                <!-- RD Navbar Right Side Toggle-->
+                <button class="rd-navbar-top-panel-toggle d-lg-none" data-rd-navbar-toggle=".rd-navbar-top-panel"><span></span></button>
+                <div class="rd-navbar-top-panel">
+                  <div class="rd-navbar-top-panel-left-part">
+                    <ul class="list-unstyled">
+                      <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                          <div class="unit-left"><span class="icon fas fa-phone text-middle"></span></div>
+                          <div class="unit-body"> <a class="d-block d-lg-inline-block" href="tel:#">+51 982272568</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                          <div class="unit-left"><span class="icon fas fa-map-marker-alt text-middle"></span></div>
+                          <div class="unit-body"><a href="">Alameda Los Laureles S/N - Distrito de Nuevo Imperial</a></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                          <div class="unit-left"><span class="icon fas fa-envelope text-middle"></span></div>
+                          <div class="unit-body"><a href="mailto:#">pilarbor70@gmail.com</a></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="rd-navbar-top-panel-right-part">
+                    <div class="rd-navbar-top-panel-left-part">
+                      <div class="unit flex-row align-items-center unit-spacing-xs">
+                        <div class="unit-body"><a href="https://api.whatsapp.com/send?phone=+51982272568">Chat</a></div>
+                        <div class="unit-left"><span class="icon fab fa-whatsapp text-middle"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rd-navbar-menu-wrap clearfix">
+                <!--Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="d-inline-block" href="#">
+                    <div class="unit align-items-sm-center unit-xl flex-column flex-xl-row unit-spacing-custom">
+                      <div class="unit-left"><img width="170" height="170" src="images/logo-170x172.png" alt="">
+                      </div>
+                      <div class="unit-body text-xl-left">
+                        <div class="rd-navbar-brand-title">Jorge Chavez Dartnell</div>
+                        <div class="rd-navbar-brand-slogan">La Florida</div>
+                      </div>
+                    </div></a></div>
+                <div class="rd-navbar-nav-wrap">
+                  <div class="rd-navbar-mobile-scroll">
+                    <div class="rd-navbar-mobile-header-wrap">
+                      <!--Navbar Brand Mobile-->
+                      <div class="rd-navbar-mobile-brand"><a href="#"><img width="136" height="138" src="images/logo-170x172.png" alt=""></a></div>
+                    </div>
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class=""><a href="./">Inicio</a>
+                      <li class="rd-navbar--has-dropdown rd-navbar-submenu"><a href="./nosotros.php">Nosotros</a>
+                        <ul class="rd-navbar-dropdown">
+                          <li><a href="./nosotros.php#mision">Misión y visión</a>
+                          </li>
+                          <li><a href="./nosotros.php#historia">Historia</a>
+                          </li>
+                          <li><a href="./nosotros.php#infraestructura">Infraestructura</a>
+                          </li>
+                        </ul>
+                      <span class="rd-navbar-submenu-toggle"></span></li>
+                      <li class="rd-navbar--has-megamenu rd-navbar-submenu"><a href="">Personal</a>
+                        <div class="rd-navbar-megamenu">
+                          <div class="row section-relative">
+                            <ul class="col-lg-4">
+                              <li>
+                                <h6>Primaria</h6>
+                                <ul class="list-unstyled offset-lg-top-20">
+                                  <li><a href="./personal.php?nivel=1&grado=1">Primero</a></li>
+                                  <li><a href="./personal.php?nivel=1&grado=2">Segundo</a></li>
+                                  <li><a href="./personal.php?nivel=1&grado=3">Tercero</a></li>
+                                  <li><a href="./personal.php?nivel=1&grado=4">Cuarto</a></li>
+                                  <li><a href="./personal.php?nivel=1&grado=5">Quinto</a></li>
+                                  <li><a href="./personal.php?nivel=1&grado=6">Sexto</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <ul class="col-lg-4">
+                              <li>
+                                <h6>Secundaria</h6>
+                                <ul class="list-unstyled offset-lg-top-20">
+                                  <li><a href="./personal.php?nivel=2&grado=1">Martematica</a></li>
+                                  <li><a href="./personal.php?nivel=2&grado=2">Comunicación</a></li>
+                                  <li><a href="./personal.php?nivel=2&grado=3">Ciencias Sociales</a></li>
+                                  <li><a href="./personal.php?nivel=2&grado=4">C.T.A.</a></li>
+                                  <li><a href="./personal.php?nivel=2&grado=5">Ingles</a></li>
+                                  <li><a href="./personal.php?nivel=2&grado=6">D.P.C.C.</a></li>
+                                  <li><a href="./personal.php?nivel=2&grado=7">Arte</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <ul class="col-lg-4">
+                              <li>
+                                <h6>Adminstrativo</h6>
+                                <ul class="list-unstyled offset-lg-top-20">
+                                  <li><a href="./personal.php?cargo=1">Mantenimiento</a></li>
+                                  <li><a href="./personal.php?cargo=2">Guardia</a></li>
+                                </ul>
+                              </li>
+                              <li>
+                                <h6>Directivo</h6>
+                                <ul class="list-unstyled offset-lg-top-20">
+                                  <li><a href="./personal.php?cargo=3">Directora</a></li>
+                                  <li><a href="./personal.php?cargo=4">Secretario</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      <span class="rd-navbar-submenu-toggle"></span></li>
+                      <li class=""><a href="./events.php">Eventos</a>
+                      <li class=""><a href="./news.php">Noticias</a>
+                      <li><a href="./mesaDePartes.php">Mesa de Partes</a>
+                      </li>
+                      <li><a href="#contactoReference">Contacto</a>
+                      </li>
+                      
+                    </ul>
+                    <!--RD Navbar Search-->
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+
+
+            <!-- Setion Paralax-->
+            <section class="section">
+        <!-- Swiper-->
+        <div class="swiper-container swiper-slider swiper-slider-2" data-autoplay="true" data-height="35%" data-loop="true" data-dragable="false" data-min-height="480px" data-slide-effect="true">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-slide-bg="./images/carrousel/paralax_01.jpg" style="background-position: 80% center">
+              <div class="swiper-slide-caption">
+                <div class="container">
+                  <div class="row justify-content-sm-center justify-content-xl-start">
+                    <div class="col-lg-9 text-lg-left col-sm-10">
+                      <div data-caption-animate="fadeInUp" data-caption-delay="100"> 
+                        <h1 class="font-weight-bold"><a href="academics.html">Felices Fiestas Patrias</a></h1>
+                      </div>
+                      <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
+                        <h5>Les desea la I.E.P. Jorge Chavez Dartnell</h5>
+                      </div>
+                      <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400">
+                        <div class="inset-sm-left-30 d-xl-inline-block"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="./images/carrousel/paralax_02.jpg" style="background-position: 80% center">
+              <div class="swiper-slide-caption">
+                <div class="container">
+                  <div class="row justify-content-sm-center justify-content-xl-start">
+                    <div class="col-lg-9 text-lg-left col-sm-10">
+                      <div data-caption-animate="fadeInUp" data-caption-delay="100">
+                        <h1 class="font-weight-bold"><a href="academics.html">Seguimos Aprendiendo</a></h1>
+                      </div>
+                      <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
+                        <h5>A pesar de las circunstancias  seguimos aprendiendo.</h5>
+                      </div>
+                      <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400">
+                        <div class="inset-sm-left-30 d-xl-inline-block"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="./images/carrousel/paralax_03.jpg" style="background-position: 80% center">
+              <div class="swiper-slide-caption">
+                <div class="container">
+                  <div class="row justify-content-sm-center justify-content-xl-start">
+                    <div class="col-lg-9 text-lg-left col-sm-10">
+                      <div data-caption-animate="fadeInUp" data-caption-delay="100">
+                        <h1 class="font-weight-bold"><a href="academics.html"><br class="d-none d-lg-inline-block">Mesa de Partes</a></h1>
+                      </div>
+                      <div class="offset-top-20 offset-xs-top-40 offset-xl-top-60 inset-xl-right-100" data-caption-animate="fadeInUp" data-caption-delay="150">
+                        <h5>Si necesitas presentar documentos, puedes hacerlo en la mesa de partes virtual.</h5>
+                      </div>
+                      <div class="offset-top-20 offset-xl-top-40" data-caption-animate="fadeInUp" data-caption-delay="400"><a class="btn button-primary" href="login-register.html">Ver mas</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper Pagination-->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      
+
+
+      
+      <!-- A Few Words About the University-->
+      <section class="section section-xl bg-default">
+        <div class="container">
+          <div class="row row-50 text-lg-left justify-content-md-between">
+            <div class="col-lg-7 view-animate fadeInRightSm delay-04">
+              <div class="img-wrap-2">
+                <figure><a class="icon mdi mdi-play-circle-outline" data-lightgallery="item" href=""></a><img class="img-responsive d-inline-block" src="images/noticias/home-01-370x240.jpg" width="620" height="350" alt=""></figure>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <h2 class="home-headings-custom font-weight-bold view-animate fadeInLeftSm delay-06"><span class="first-word">Acerca de</span> Nuestra Institución</h2>
+              <div class="offset-top-35 offset-lg-top-60 view-animate fadeInLeftSm delay-08">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nesciunt explicabo eligendi quam nostrum porro, ut repellat iste libero ducimus? Aliquam accusantium eligendi non ducimus dolore vitae sed excepturi consequuntur.</p>
+              </div>
+              <div class="offset-top-30 view-animate fadeInLeftSm delay-1"><a class="btn btn-ellipse btn-icon btn-icon-right button-default" href="history.html"><span class="icon fa fa-arrow-right"></span><span>Ver mas</span></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+      
+        <!--Our Featured Courses-->
+        <section class="section bg-madison section-xl text-center">
+          <div class="container">
+            <h2 class="font-weight-bold text-white view-animate fadeInUpSmall delay-04">Nuestros Eventos</h2>
+            <div class="offset-top-35 offset-lg-top-60 text-white view-animate fadeInUpSmall delay-06"></div>
+            <div class="row row-30 justify-content-sm-center offset-top-60 text-md-left">
+              <div class="col-md-6 col-lg-4 view-animate fadeInRightSm delay-1">
+                <article class="post-news bg-default"><a href="news-post-page.html"><img class="img-responsive" src="images/noticias/home-02-370x240.jpg" width="370" height="240" alt=""></a>
+                  <div class="post-news-body-variant-1">
+                    <div class="post-news-meta">
+                      <time class="text-middle font-italic" datetime="2019">June 3, 2019</time>
+                    </div>
+                    <h6><a href="news-post-page.html">Desfile Cívico</a></h6>
+                    <div class="post-news-meta offset-top-20"><span class="icon icon-xs fas fa-calendar-alt text-middle text-madison"></span><span class="text-middle inset-left-10 font-italic text-black">2 days ago</span></div>
+                    <div class="offset-top-9">
+                      <p class="text-base"></p>
+                    </div>
+                    <!--No esta ciendo utilizado
+                    <div class="offset-top-9">
+                      <ul class="list-inline list-unstyled list-inline-primary">
+                        <li><span class="text-hover-custom icon icon-xxs mdi mdi-timer-sand" data-toggle="tooltip" data-placement="top" title="Part time"></span></li>
+                        <li><span class="text-hover-custom icon icon-xxs mdi mdi-star" data-toggle="tooltip" data-placement="top" title="Certified"></span></li>
+                        <li><span class="text-hover-custom icon icon-xxs mdi mdi-laptop-chromebook" data-toggle="tooltip" data-placement="top" title="Online Course"></span></li>
+                      </ul>
+                    </div>
+                  -->
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4 view-animate fadeInUpSmall delay-08">
+                <article class="post-news bg-default"><a href="news-post-page.html"><img class="img-responsive" src="images/noticias/home-03-370x240.jpg" width="370" height="240" alt=""></a>
+                  <div class="post-news-body-variant-1">
+                    <div class="post-news-meta">
+                      <time class="text-middle font-italic" datetime="2019">June 3, 2019</time>
+                    </div>
+                    <h6><a href="news-post-page.html">Concurso de danzas</a></h6>
+                    <div class="post-news-meta offset-top-20"><span class="icon icon-xs fas fa-calendar-alt text-middle text-madison"></span><span class="text-middle inset-left-10 font-italic text-black">2 days ago</span></div>
+                    
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4 view-animate fadeInLeftSm delay-1">
+                <article class="post-news bg-default"><a href="news-post-page.html"><img class="img-responsive" src="images/noticias/home-04-370x240.jpg" width="370" height="240" alt=""></a>
+                  <div class="post-news-body-variant-1">
+                    <div class="post-news-meta">
+                      <time class="text-middle font-italic" datetime="2019">June 3, 2019</time>
+                    </div>
+                    <h6><a href="news-post-page.html">Inauguración  de la nueva infraestructura del nuestra Institución</a></h6>
+                    <div class="post-news-meta offset-top-20"><span class="icon icon-xs fas fa-calendar-alt text-middle text-madison"></span><span class="text-middle inset-left-10 font-italic text-black">2 days ago</span></div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="offset-top-35 offset-xl-top-70 view-animate fadeInUpSmall"><a class="btn btn-ellipse button-primary" href="login-register.html">Ver todos los Eventos</a></div>
+          </div>
+        </section>
+
+
+
+
+        
+         <!-- Latest news-->
+         <section class="section bg-catskill section-xl">
+        <div class="container container-wide">
+          <h2 class="home-headings-custom font-weight-bold view-animate fadeInUpSmall delay-06">Noticias</h2>
+          <div class="row row-30 offset-top-60 text-left justify-content-sm-center">
+            <div class="col-md-6 col-lg-3">
+              <article class="post-news post-news-mod-1 view-animate fadeInLeftSm delay-04"><a href="news-post-page.html"><img class="img-responsive img-fullwidth" src="images/noticias/home-02-370x240.jpg" width="370" height="240" alt=""></a>
+                <div class="post-news-body">
+                  <h6><a href="news-post-page.html">Premiación de desfile por aniversario de Nuevo Imperial</a></h6>
+                  <div class="offset-top-20">
+                    <p>Nuestra institución fue premiada, con el segundo lugar, en el desfile por aniversario de Nuevo imperial ..</p>
+                  </div>
+                  <div class="post-news-meta offset-top-20"><span class="icon icon-xs fas fa-calendar-alt text-middle text-madison"></span><span class="text-middle inset-left-10 font-italic text-black">2 days ago</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <article class="post-news post-news-mod-1 view-animate fadeInLeftSm delay-06"><a href="news-post-page.html"><img class="img-responsive img-fullwidth" src="images/noticias/home-03-370x240.jpg" width="370" height="240" alt=""></a>
+                <div class="post-news-body">
+                  <h6><a href="news-post-page.html">Concurso de Danza</a></h6>
+                  <div class="offset-top-20">
+                    <p>Fue llevado a cabo el concurso de danza típicas, celebrado por el aniversario de nuestra institución...</p>
+                  </div>
+                  <div class="post-news-meta offset-top-20"><span class="icon icon-xs fas fa-calendar-alt text-middle text-madison"></span><span class="text-middle inset-left-10 font-italic text-black">2 days ago</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <article class="post-news post-news-mod-1 view-animate fadeInLeftSm delay-08"><a href="news-post-page.html"><img class="img-responsive img-fullwidth" src="images/noticias/home-04-370x240.jpg" width="370" height="240" alt=""></a>
+                <div class="post-news-body">
+                  <h6><a href="news-post-page.html">Inauguración  de la nueva infraestructura de nuestra institución</a></h6>
+                  <div class="offset-top-20">
+                    <p>Finalmente podemos celebrar que nuestra escuela fue construida, es una gran espera que por fin culmina, agradecemos al Banco de Credito del Perú...</p>
+                  </div>
+                  <div class="post-news-meta offset-top-20"><span class="icon icon-xs fas fa-calendar-alt text-middle text-madison"></span><span class="text-middle inset-left-10 font-italic text-black">2 days ago</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <article class="post-news post-news-mod-1 view-animate fadeInLeftSm delay-1"><a href="news-post-page.html"><img class="img-responsive img-fullwidth" src="images/noticias/home-05-370x240.jpg" width="370" height="240" alt=""></a>
+                <div class="post-news-body">
+                  <h6><a href="news-post-page.html">Reunión con los ingenieros y los trabajadores</a></h6>
+                  <div class="offset-top-20">
+                    <p>Nos reunimos con los trabajdores a cargo de la construcción de la nueva infraestructura de nuestra institución...</p>
+                  </div>
+                  <div class="post-news-meta offset-top-20"><span class="icon icon-xs fas fa-calendar-alt text-middle text-madison"></span><span class="text-middle inset-left-10 font-italic text-black">2 days ago</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="offset-top-50 view-animate fadeInUpSmall"><a class="btn btn-ellipse button-primary" href="./news.php">Ver todas las noticias</a></div>
+        </div>
+      </section>
+
+            <!-- Contact info-->
+            <section class="section section-xs" id="contactoReference">
+        <div class="container">
+          <div class="row row-30 justify-content-sm-center features-list">
+            <div class="col-md-4">
+              <div class="unit flex-column unit-responsive-md section-45">
+                <div class="unit-left"><span class="icon icon-contact-sm text-madison fas fa-phone"></span></div>
+                <div class="unit-body"><a class="h6 text-regular" href="tel:#">+51 982272568</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unit flex-column unit-responsive-md section-45">
+                <div class="unit-left"><span class="icon icon-contact-sm text-madison fas fa-map-marker-alt"></span></div>
+                <div class="unit-body"><a class="h6 text-regular" href="#">Alameda Los Laureles S/N - La Forida, Distrito de Nuevo Imperial <br class="d-none d-xl-inline"> Cañete, Perú</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unit flex-column unit-responsive-md section-45">
+                <div class="unit-left"><span class="icon icon-contact-sm text-madison fas fa-envelope"></span></div>
+                <div class="unit-body"><a class="h6 text-regular" href="mailto:#">pilarbor70@gmail.com</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Google Map-->
+      <!--Google Map-->
+      <section class="section">
+        <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
+        <!--Please note that YOUR_API_KEY should replaced with your key.-->
+        <!--Example: <div class="google-map-container" data-key="YOUR_API_KEY">-->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.9774539849827!2d-76.28307913512262!3d-13.084796047591677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910ffca62f38eee9%3A0xad929581f1b0166!2sInst.%20Educativa%2020163.%20J%C3%B3rge%20Ch%C3%A1vez!5e0!3m2!1ses-419!2spe!4v1596329303918!5m2!1ses-419!2spe" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          
+      </section>
+      <!-- Corporate footer-->
+
+<footer class="page-footer">
+        <div class="container section-xs section-bottom-20">
+          <div class="row justify-content-sm-center">
+            <div class="col-lg-3 col-xl-2">
+              <!--Footer brand--><a class="d-inline-block view-animate zoomInSmall delay-06" href="index.html"><img width="65" height="60" src="images/logo-170x172.png" alt="">
+                <div>
+                  <h6 class="barnd-name font-weight-bold offset-top-12">Jorge Chavez Dartnell</h6>
+                </div>
+                <div>
+                  <p class="brand-slogan text-gray font-italic font-accent">La Florida</p>
+                </div></a>
+            </div>
+            <div class="col-sm-12 offset-top-15 offset-sm-top-40 text-center">
+              <ul class="list-inline list-inline-xs list-inline-madison">
+                <li><a class="icon novi-icon icon-xxs fab fa-facebook icon-circle icon-gray-light-filled view-animate zoomInSmall delay-04" href="#"></a></li>
+                <li><a class="icon novi-icon icon-xxs fab fa-twitter icon-circle icon-gray-light-filled view-animate zoomInSmall delay-06" href="#"></a></li>
+                <li><a class="icon novi-icon icon-xxs fab fa-google icon-circle icon-gray-light-filled view-animate zoomInSmall delay-08" href="#"></a></li>
+                <li><a class="icon novi-icon icon-xxs fab fa-instagram icon-circle icon-gray-light-filled view-animate zoomInSmall delay-1" href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyC7WtKX9eniDIJ56QP47B07E2DLE1e11Y8",
-    authDomain: "fir-project-4a532.firebaseapp.com",
-    databaseURL: "https://fir-project-4a532.firebaseio.com",
-    projectId: "fir-project-4a532",
-    storageBucket: "fir-project-4a532.appspot.com",
-    messagingSenderId: "868916431663",
-    appId: "1:868916431663:web:3c8d07f299728aed9dafda",
-    measurementId: "G-CSD0VKJN3H"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-<!--My Code-->
-<script src="main.js"></script>
-    
+    <!-- Java script-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+	
 </body>
 </html>
